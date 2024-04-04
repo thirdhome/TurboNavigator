@@ -16,6 +16,10 @@ public extension VisitProposal {
         return .default
     }
 
+    var enableBackButton: Bool {
+        properties["enable_back_button"] as? Bool ?? true
+    }    
+
     /// Used to identify a custom native view controller if provided in the path configuration properties of a given pattern.
     ///
     /// For example, given the following configuration file:

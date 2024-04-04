@@ -181,6 +181,10 @@ public class TurboNavigator {
     }
 
     private func replace(with controller: UIViewController, via proposal: VisitProposal) {
+        if proposal.enableBackButton == false {
+            controller.navigationItem.setHidesBackButton(true, animated: true)
+        }
+
         switch proposal.context {
         case .default:
             navigationController.dismiss(animated: true)
